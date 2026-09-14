@@ -1,0 +1,17 @@
+{
+  "name": "searchd-skills",
+  "description": "SearchD Agent Skills and Claude Code plugins for answer-engine visibility",
+  "owner": {
+    "name": "SearchD",
+    "email": "hello@searchd.ai"
+  },
+  "plugins": [
+    {
+      "name": "searchd-aeo-audit",
+      "version": "1.0.0",
+      "description": "Measure answer-engine visibility and render evidence-first HTML reports",
+      "source": "./searchd-aeo-audit",
+      "skills": ["./skills/searchd-aeo-audit"]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Validate Claude marketplace
+        run: npx -y @anthropic-ai/claude-code plugin validate .
+
+      - name: Test AEO audit renderer
+        working-directory: searchd-aeo-audit/skills/searchd-aeo-audit
+        run: uv run --with pytest pytest -q tests
+
+      - name: Lint AEO audit package
+        working-directory: searchd-aeo-audit/skills/searchd-aeo-audit
+        run: uvx ruff check .
+
+      - name: Type-check AEO audit package
+        working-directory: searchd-aeo-audit/skills/searchd-aeo-audit
+        run: uvx --with pytest basedpyright
+
+      - name: Validate audit example
+        working-directory: searchd-aeo-audit/skills/searchd-aeo-audit
+        run: >-
+          uvx check-jsonschema
+          --schemafile schemas/audit.schema.json
+          examples/searchd-ai-audit.json
+
+      - name: Discover portable Skill
+        run: npx -y skills add "$GITHUB_WORKSPACE" --list
+
+      - name: Install portable Skill
+        run: |
+          mkdir -p /tmp/searchd-skill-install
+          cd /tmp/searchd-skill-install
+          npx -y skills add "$GITHUB_WORKSPACE" \
+            --skill searchd-aeo-audit \
+            --agent codex \
+            --copy \
+            -y
+          test -f .agents/skills/searchd-aeo-audit/SKILL.md
+          test -f .agents/skills/searchd-aeo-audit/scripts/render_report.py

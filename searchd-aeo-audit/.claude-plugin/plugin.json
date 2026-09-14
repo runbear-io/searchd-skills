@@ -1,0 +1,20 @@
+{
+  "name": "searchd-aeo-audit",
+  "version": "1.0.0",
+  "description": "Measure answer-engine visibility and render evidence-first HTML reports",
+  "author": {
+    "name": "SearchD",
+    "email": "hello@searchd.ai",
+    "url": "https://searchd.ai"
+  },
+  "homepage": "https://searchd.ai",
+  "repository": "https://github.com/runbear-io/searchd-skills",
+  "license": "MIT",
+  "keywords": [
+    "aeo",
+    "geo",
+    "ai-visibility",
+    "answer-engine-optimization",
+    "searchd"
+  ]
+}
