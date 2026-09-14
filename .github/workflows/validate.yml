@@ -46,6 +46,16 @@ jobs:
           --schemafile schemas/audit.schema.json
           examples/searchd-ai-audit.json
 
+      - name: Install Codex plugin
+        env:
+          CODEX_HOME: /tmp/searchd-codex-plugin
+        run: |
+          mkdir -p "$CODEX_HOME"
+          npx -y @openai/codex plugin marketplace add "$GITHUB_WORKSPACE"
+          npx -y @openai/codex plugin add searchd-aeo-audit@searchd-skills
+          npx -y @openai/codex plugin list --json \
+            | grep -q '"pluginId": "searchd-aeo-audit@searchd-skills"'
+
       - name: Discover portable Skill
         run: npx -y skills add "$GITHUB_WORKSPACE" --list
 

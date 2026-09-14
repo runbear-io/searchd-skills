@@ -1,0 +1,20 @@
+{
+  "name": "searchd-skills",
+  "interface": {
+    "displayName": "SearchD Skills"
+  },
+  "plugins": [
+    {
+      "name": "searchd-aeo-audit",
+      "source": {
+        "source": "local",
+        "path": "./searchd-aeo-audit"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

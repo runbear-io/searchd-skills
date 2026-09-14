@@ -1,0 +1,44 @@
+{
+  "name": "searchd-aeo-audit",
+  "version": "1.0.0",
+  "description": "Measure answer-engine visibility and render evidence-first HTML reports",
+  "author": {
+    "name": "SearchD",
+    "email": "hello@searchd.ai",
+    "url": "https://searchd.ai"
+  },
+  "homepage": "https://searchd.ai",
+  "repository": "https://github.com/runbear-io/searchd-skills",
+  "license": "MIT",
+  "keywords": [
+    "aeo",
+    "geo",
+    "ai-visibility",
+    "answer-engine-optimization",
+    "searchd"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SearchD AEO Audit",
+    "shortDescription": "Measure how brands appear in AI answers",
+    "longDescription": "Run neutral buyer-question research, preserve answer and citation evidence, compare competing brands, and render a deterministic English or Korean answer-engine visibility report.",
+    "developerName": "SearchD",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://searchd.ai",
+    "privacyPolicyURL": "https://searchd.ai/privacy",
+    "termsOfServiceURL": "https://searchd.ai/terms",
+    "defaultPrompt": [
+      "Audit a company for answer-engine visibility.",
+      "Compare which brands appear across buyer questions.",
+      "Render an AEO audit report in Korean."
+    ],
+    "brandColor": "#0D1117",
+    "composerIcon": "./assets/searchd-icon.svg",
+    "logo": "./assets/searchd-icon.svg",
+    "screenshots": []
+  }
+}
