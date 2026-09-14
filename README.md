@@ -23,6 +23,20 @@ Install the AEO audit plugin:
 /plugin install searchd-aeo-audit@searchd-skills
 ```
 
+## Install with Codex
+
+Add the SearchD plugin marketplace:
+
+```bash
+codex plugin marketplace add runbear-io/searchd-skills --ref main
+```
+
+Install the AEO audit plugin:
+
+```bash
+codex plugin add searchd-aeo-audit@searchd-skills
+```
+
 ## Install as a portable Agent Skill
 
 Compatible Agent Skills clients can install the same package directly:
