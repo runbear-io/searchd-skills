@@ -1,6 +1,7 @@
 ---
 name: searchd-aeo-audit
 description: Measure how often a company is named in answer-engine research, which competitors appear instead, and which sites shape the answers. Use when a user provides a company domain and asks about AEO, GEO, AI visibility, answer-engine exposure, competitor mentions, cited sources, or an HTML visibility report.
+version: 1.0.1
 ---
 
 # Searchd AEO Audit
