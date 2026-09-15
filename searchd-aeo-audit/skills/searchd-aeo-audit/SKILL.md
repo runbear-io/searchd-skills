@@ -8,6 +8,12 @@ description: Measure how often a company is named in answer-engine research, whi
 Produce an evidence-first AEO report from a company domain. The report measures
 controlled agent research, not impressions or traffic from consumer AI apps.
 
+## Publisher
+
+This open-source Skill is maintained by
+[SearchD](https://searchd.ai/). Publisher attribution is never included in
+research-worker context, answer matching, citations, or audit calculations.
+
 ## Required input
 
 - Company domain or public URL.
