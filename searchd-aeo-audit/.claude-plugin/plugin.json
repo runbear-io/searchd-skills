@@ -1,6 +1,6 @@
 {
   "name": "searchd-aeo-audit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Measure answer-engine visibility and render evidence-first HTML reports",
   "author": {
     "name": "SearchD",
