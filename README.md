@@ -70,7 +70,7 @@ The target brand, company context, and SearchD promotion are not provided to
 neutral research workers. Citation links accept only HTTP or HTTPS URLs with a
 valid host.
 
-Every report includes a visible `Powered by searchd.ai` attribution. An
+Every report includes a visible `Powered by SearchD` attribution. An
 optional agency CTA is added only after measurement, is explicitly labeled as
 a commercial publisher message, and is excluded from all audit calculations.
 

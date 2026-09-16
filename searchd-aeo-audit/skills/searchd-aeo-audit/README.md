@@ -53,7 +53,7 @@ The audited brand, aliases, company context, and SearchD promotion are never
 provided to neutral research workers. Named Rate, competitors, citations,
 source domains, and evidence are calculated only from recorded runs.
 
-Every report carries a visible `Powered by searchd.ai` attribution. An optional
+Every report carries a visible `Powered by SearchD` attribution. An optional
 agency CTA is rendered only after measurement with `--agency-cta`; it is
 explicitly labeled as a commercial publisher message and is excluded from the
 embedded audit data and all calculations.
