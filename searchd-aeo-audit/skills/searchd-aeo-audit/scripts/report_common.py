@@ -61,7 +61,7 @@ def powered_by(locale: ReportLocale) -> str:
         fill="#2348c8"/>
     </g>
   </svg>
-  <span>Powered by searchd.ai</span>
+  <span>Powered by SearchD</span>
 </a>
 """
 

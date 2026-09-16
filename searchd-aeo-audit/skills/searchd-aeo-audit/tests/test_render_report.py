@@ -297,6 +297,7 @@ def test_renderer_attributes_searchd_without_changing_measurement(
   assert 'href="https://searchd.ai/"' in html
   assert 'data-attribution="publisher"' in html
   assert "<svg" in html
+  assert "<span>Powered by SearchD</span>" in html
   assert expected_named_rate in html
   assert 'id="searchd-agency-cta"' not in html
 
