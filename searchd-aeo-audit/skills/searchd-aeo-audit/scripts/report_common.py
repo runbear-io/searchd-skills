@@ -91,8 +91,8 @@ def masthead(audit: Audit, locale: ReportLocale) -> str:
     metadata = audit.metadata
     overline = localized(
         locale,
-        "SearchD.ai / Answer-engine exposure audit",
-        "SearchD.ai / 답변 엔진 노출 감사",
+        "SearchD / Answer-engine exposure audit",
+        "SearchD / 답변 엔진 노출 감사",
     )
     title = localized(
         locale,

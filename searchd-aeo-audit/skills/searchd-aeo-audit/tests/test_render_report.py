@@ -277,6 +277,7 @@ def test_renderer_localizes_report_chrome_without_translating_evidence(
   assert "경쟁사 및 인용 출처" in html
   assert "실행별 근거" in html
   assert "관찰 결과와 권고" in html
+  assert "SearchD / 답변 엔진 노출 감사" in html
   assert exact_measured_question in html
 
 
@@ -298,6 +299,7 @@ def test_renderer_attributes_searchd_without_changing_measurement(
   assert 'data-attribution="publisher"' in html
   assert "<svg" in html
   assert "<span>Powered by SearchD</span>" in html
+  assert "SearchD / Answer-engine exposure audit" in html
   assert expected_named_rate in html
   assert 'id="searchd-agency-cta"' not in html
 
